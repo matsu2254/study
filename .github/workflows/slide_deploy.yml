@@ -74,7 +74,7 @@ jobs:
               #! /bin/bash
               pwd
               ls
-              cd build/docs
+              cd build
 
               updated_at=`TZ="Asia/Tokyo" date "+%Y/%m/%d %H:%M"`
 
@@ -128,7 +128,7 @@ jobs:
               </body>
               </html>
               HTML
-              
+
       - name: Deploy preview
         if: ${{ github.event_name == 'pull_request' }}
         uses: rossjrw/pr-preview-action@v1
