@@ -91,11 +91,11 @@ jobs:
               <h1>プレゼンテーションアーカイブ</h1>
               <ul>
               HTML
-              find -name "*.md" | sed 's/\.md//g'
-              for file in `find -name "*.md" | sed 's/\.md//g'`; do
+              find -name "*.html" | sed 's/\.html//g'
+              for file in `find -name "*.html" | sed 's/\.html//g'`; do
                 title=`grep "title:" $file.md | cut -f2 -d":" | xargs`
-                #title=`echo $file | rev | cut -d '/' -f 1 | cut -d '.' -f2- | rev`
-                echo title
+                title=${title:-`echo $file | rev | cut -d '/' -f 1 | cut -d '.' -f2- | rev`}
+                echo $title
                 echo -e "$file\t\t$title"
                 cat << HTML >> index.html
                 <li>
