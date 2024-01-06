@@ -192,11 +192,10 @@ A列の値すべてを選択肢、足し合わせているのだから、書き�
 1行目のA,B,Cを足す
 
 ~~~
-df[['A','B','C']].loc['1'].sum() 
-#df.drop('D',axis=True).loc['1'].sum() # 勿論これでもOK
+df.loc[:'1','A':'C'].transpose().sum()
 ~~~
 
-![Alt text](../img/image-6.png)
+![Alt text](../img/Screenshot%20from%202024-01-06%2022-14-02.png)
 
 エクセルで書くなら
 ~~~
@@ -266,6 +265,7 @@ https://github.com/matsu2254/study/blob/dev/material/20240112_pandas_nyumon/note
 
 基本的な表データの読み込みなど
 
+https://github.com/matsu2254/study/blob/main/material/20240112_pandas_nyumon/notebook/zissen1.ipynb
 
 
 ---
