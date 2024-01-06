@@ -60,11 +60,11 @@ jobs:
         env:
           MARP_USER: root:root
 
-      - name: Marp Build pdf (docs folder, if exists)
+      - name: Marp Build pptx (docs folder, if exists)
         if: steps.docs-folder-exists.outputs.has_docs == '0'
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args: --pdf-notes -I docs/ -o build/docs/
+          args: --pptx -I docs/ -o build/docs/
         env:
           MARP_USER: root:root
       
@@ -100,7 +100,7 @@ jobs:
                 <li>
                   <a href="$file.html" target="_blank">$title</a>
                   <span>
-                    [<a href="$file.pdf" target="_blank">PDF</a>]
+                    [<a href="$file.pptx" target="_blank">pptx</a>]
                   </span>
                 </li>
               HTML
