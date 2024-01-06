@@ -50,9 +50,7 @@ jobs:
 
       - name: Check if docs folder exists
         id: docs-folder-exists
-        run: |
-              bash -c "[[ -d docs ]] ; echo \"has_docs=\$?\" >> \"$GITHUB_OUTPUT\""
-              cp -R docs build/docs
+        run: bash -c "[[ -d docs ]] ; echo \"has_docs=\$?\" >> \"$GITHUB_OUTPUT\""
 
       - name: Marp Build (docs folder, if exists)
         if: steps.docs-folder-exists.outputs.has_docs == '0'
@@ -74,10 +72,8 @@ jobs:
         if: steps.docs-folder-exists.outputs.has_docs == '0'
         run: |
               #! /bin/bash
-              pwd
-              ls
-              cd build
 
+              cd build
               updated_at=`TZ="Asia/Tokyo" date "+%Y/%m/%d %H:%M"`
 
               cat << HTML > index.html
@@ -91,17 +87,19 @@ jobs:
               <h1>プレゼンテーションアーカイブ</h1>
               <ul>
               HTML
-              find -name "*.html" | sed 's/\.html//g'
-              for file in `find -name "*.html" | sed 's/\.html//g'`; do
+
+              for file in `find -name "*.html" -not -name "index.html" | sed 's/\.html//g'`; do
+
                 title=`grep "title:" $file.md | cut -f2 -d":" | xargs`
                 title=${title:-`echo $file | rev | cut -d '/' -f 1 | cut -d '.' -f2- | rev`}
+
                 echo $title
                 echo -e "$file\t\t$title"
+
                 cat << HTML >> index.html
                 <li>
                   <a href="$file.html" target="_blank">$title</a>
                   <span>
-                    [<a href="$file.md" target="_blank">markdown</a>]
                     [<a href="$file.pdf" target="_blank">PDF</a>]
                   </span>
                 </li>
