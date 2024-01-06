@@ -101,11 +101,8 @@ jobs:
                     alt="Index build status">
                 </li>
               HTML
-
-              IFS=$'\n'
-
               for file in `find -name "*.md" | sed 's/\.md//g'`; do
-                title=`grep "title:" $file.md | cut -f2 -d":" | xargs`
+                title=`$file | rev | cut -d '/' -f 1 | cut -d '.' -f2- | rev`
 
                 if ! grep -q "private:" $file.md ; then
                   echo -e "$file\t\t$title"
@@ -123,7 +120,7 @@ jobs:
                 fi
               done
 
-              echo << HTML >> index.html
+              cat << HTML >> index.html
               </ul>
               </body>
               </html>
