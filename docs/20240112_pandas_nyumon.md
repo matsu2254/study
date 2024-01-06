@@ -103,7 +103,8 @@ df
 
 |Pandas|エクセル(もどき)|
 |-|-|
-![Alt text](image-3.png) |![Alt text](image-5.png)
+![Alt text](../img/image-3.png) |![Alt text](../img/image-5.png)
+
 
 ---
 
@@ -127,7 +128,7 @@ df['A']
 df['A'].sum()
 ~~~
 
-![Alt text](image-4.png)
+![Alt text](../img/image-4.png)
 
 エクセルで書くなら
 
@@ -144,7 +145,7 @@ df[['A','B','C']].loc['1'].sum()
 #df.drop('D',axis=True).loc['1'].sum() # 勿論これでもOK
 ~~~
 
-![Alt text](image-6.png)
+![Alt text](../img/image-6.png)
 
 エクセルで書くなら
 ~~~
@@ -158,7 +159,7 @@ df[['A','B','C']].loc['1'].sum()
 ~~~
 df.describe()
 ~~~
-![Alt text](image-7.png)
+![Alt text](../img/image-7.png)
 
 ---
 ## Pandasの基本的な操作

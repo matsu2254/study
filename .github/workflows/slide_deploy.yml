@@ -60,6 +60,75 @@ jobs:
         env:
           MARP_USER: root:root
 
+      - name: Marp Build pdf (docs folder, if exists)
+        if: steps.docs-folder-exists.outputs.has_docs == '0'
+        uses: docker://marpteam/marp-cli:v3.0.2
+        with:
+          args: --pdf-notes -I docs/ -o build/docs/
+        env:
+          MARP_USER: root:root
+      
+      - name: make index
+        if: steps.docs-folder-exists.outputs.has_docs == '0'
+        run: |
+              #! /bin/bash
+              pwd
+              ls
+              cd build/docs
+
+              updated_at=`TZ="Asia/Tokyo" date "+%Y/%m/%d %H:%M"`
+
+              cat << HTML > index.html
+              <!DOCTYPE html>
+              <html lang="ja-JP">
+              <head>
+                <meta charset="utf-8">
+                <title>PRESENTATIONS</title>
+                <link rel="stylesheet" href="./style.css">
+                <meta name="viewport" content="width=device-width">
+              </head>
+              <body>
+              <h1>プレゼンテーションアーカイブ</h1>
+              <ul>
+                <li id="profile">
+                  <a href="https://github.com/${GITHUB_ACTOR}" target="_blank">
+                    <img src="https://github.com/${GITHUB_ACTOR}.png" alt="">
+                    <b>${GITHUB_ACTOR}</b> updated this page at $updated_at
+                  </a>
+
+
+                  <img id="build-status" src="https://github.com/${GITHUB_REPOSITORY}/actions/workflows/index.yml/badge.svg?branch=master"
+                    alt="Index build status">
+                </li>
+              HTML
+
+              IFS=$'\n'
+
+              for file in `find -name "*.md" | sed 's/\.md//g'`; do
+                title=`grep "title:" $file.md | cut -f2 -d":" | xargs`
+
+                if ! grep -q "private:" $file.md ; then
+                  echo -e "$file\t\t$title"
+                  cat << HTML >> index.html
+                <li>
+                  <a href="$file.html" target="_blank">$title</a>
+                  <span>
+                    [<a href="$file.md" target="_blank">markdown</a>]
+                    [<a href="$file.pdf" target="_blank">PDF</a>]
+                  </span>
+                </li>
+              HTML
+                else
+                  echo -e "$file*\t\t$title"
+                fi
+              done
+
+              echo << HTML >> index.html
+              </ul>
+              </body>
+              </html>
+              HTML
+              
       - name: Deploy preview
         if: ${{ github.event_name == 'pull_request' }}
         uses: rossjrw/pr-preview-action@v1
