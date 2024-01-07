@@ -74,8 +74,7 @@ jobs:
               #! /bin/bash
 
               cd build
-              updated_at=`TZ="Asia/Tokyo" date "+%Y/%m/%d %H:%M"`
-
+              
               cat << HTML > index.html
               <!DOCTYPE html>
               <html lang="ja-JP">
