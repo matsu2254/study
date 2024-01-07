@@ -6,9 +6,6 @@ header:
 footer: by @matsu3365
 
 ---
-<!--
-<h1 id="">熊猫(pandas)と和解せよ</h1>
--->
 
 <h1><span style="color: yellow; ">熊猫</span><span style="color: white">と和解せよ</span><h1>      
 
