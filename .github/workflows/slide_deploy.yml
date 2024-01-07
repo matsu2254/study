@@ -89,7 +89,7 @@ jobs:
 
               for file in `find -name "*.html" -not -name "index.html" | sed 's/\.html//g'`; do
 
-                title=`grep "<h1" $file.html | sed 's@^<h1 id=".*">\(.*\)</h1>@\1@g' |head -n1`
+                title=`grep "^<h1" $file.html | sed 's@<h1 id=".*">\(.*\)</h1>@\1@g' |head -n1`
                 title=${title:-`echo $file | rev | cut -d '/' -f 1 | cut -d '.' -f2- | rev`}
 
                 echo -e "$file\t\t$title"
