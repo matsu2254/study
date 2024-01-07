@@ -28,7 +28,6 @@ marp: true
 paginate: true
 # テーマ
 theme: default
-title: 
 #class: invert # 白黒反転
 #header: "**〇〇株式会社など**"
 #footer: "by 作成者名など"

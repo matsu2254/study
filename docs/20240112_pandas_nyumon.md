@@ -6,13 +6,22 @@ header:
 footer: by @matsu3365
 
 ---
+<!--
+<h1 id="">熊猫(pandas)と和解せよ</h1>
+-->
 
-# ふわっと学ぶ　Pandas入門
+<h1><span style="color: yellow; ">熊猫</span><span style="color: white">と和解せよ</span><h1>      
+
+<span style="color: grey">ふわっと学ぶ　Pandas入門</span>
+
+<!-- 
+_backgroundColor: black
+ -->
 
 <!-- 
 
-「ふわっと学ぶ　Pandas入門」と題してお話させていただきます。
-なぜふわっとかと言えば、教科書てきに教えられて身につくようなものではないので、
+「熊猫(パンダ)と和解せよ　ふわっと学ぶ　Pandas入門」と題してお話させていただきます。
+教科書てきに教えられて身につくようなものではないので、
 「ふわっとさらっと、Pandas 怖くないよ！」
 って伝えた上で、気軽に動かしながら試していただきたいと思います。
 
@@ -318,7 +327,7 @@ https://github.com/matsu2254/study/blob/main/material/20240112_pandas_nyumon/not
 ## Pandasと和解できましたか？
 
 方法論としてはこのぐらいにして、
-**実現したいコトの沼**へLet's go
+**お困りごとの沼**へ沈みましょう
 <br></br>
 : (((;"°;ω°;)):ｶﾞｸｶﾞｸｶﾞｸ
 
