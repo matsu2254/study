@@ -38,7 +38,7 @@ https://gist.github.com/matsu2254/e784c0496cc12a2fc9ee9fb200a7a119
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/matsu2254/study/blob/main/material/20240112_pandas_nyumon/notebook/zissen1.ipynb)
 
-https://gist.github.com/matsu2254/3981dc122fcb46d467855d84ed09eb55
+https://gist.github.com/matsu2254/b9b956096fe1568202cd335fa03b3987
 
 ---
 
@@ -48,7 +48,7 @@ https://gist.github.com/matsu2254/3981dc122fcb46d467855d84ed09eb55
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/matsu2254/study/blob/main/material/20240112_pandas_nyumon/notebook/zissen2.ipynb)
 
-https://gist.github.com/matsu2254/7c64a9813ca61f75d9b5af80351adb83
+https://gist.github.com/matsu2254/fb2ea5c70e3762599ace5b5945ecef87
 
 <!--
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
