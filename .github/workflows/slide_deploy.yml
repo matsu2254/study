@@ -11,13 +11,12 @@ on:
       - synchronize
       - closed
 jobs:
-  build:
+  presentation-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
     steps:
-
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -110,14 +109,6 @@ jobs:
               </html>
               HTML
 
-      - uses: matsu2254/gist-sync-action@v1.2.2
-        id: sync
-        with:
-          auth: ${{ secrets.GIST_TOKEN }}
-          user: matsu2254
-          gist_description: synced from git hub
-          github_file: "*.ipynb"
-
       - name: Deploy preview
         if: ${{ github.event_name == 'pull_request' }}
         uses: rossjrw/pr-preview-action@v1
@@ -133,3 +124,16 @@ jobs:
           branch: gh-pages
           folder: ./build/
           clean-exclude: pr-preview/
+          
+  gist-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: matsu2254/gist-sync-action@v1.2.2
+        id: sync
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          user: matsu2254
+          gist_description: synced from git hub
+          github_file: "*.ipynb"
