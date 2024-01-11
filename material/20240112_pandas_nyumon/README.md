@@ -13,7 +13,7 @@ https://github.com/matsu2254/study/tree/main/material/20240112_pandas_nyumon
 
 ## スライド
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRPtS2uEfynKjvM5Pf9xAvuC5ABk-qcyESKs3YnZshTR6apZsUHEUSKUbvrtqAUddTR-dmfyji4NNo4/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRyZL93vpkRQ5YyBBXUPwCWy6Bj7CocyoQV_6rLvi6d4D5KKx9fJsU6ko7M0U_mNJ9w3dCPc1aan5Bp/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## notebook
 
@@ -26,31 +26,22 @@ https://qiita.com/kaita_kakihara/items/bf66e9e4927a3e3589e4
 
 ### 入門
 
-**TODO** gistの更新
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/matsu2254/study/blob/main/material/20240112_pandas_nyumon/notebook/pandas_nyumon.ipynb)
 
-https://gist.github.com/matsu2254/e784c0496cc12a2fc9ee9fb200a7a119
+https://gist.github.com/matsu2254/e08e3f3b47cf839f71907b1b71067d90
 
 ---
 
 ### 応用（１）
 
-**TODO** gistの更新
-
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/matsu2254/study/blob/main/material/20240112_pandas_nyumon/notebook/zissen1.ipynb)
 
-https://gist.github.com/matsu2254/b9b956096fe1568202cd335fa03b3987
+https://gist.github.com/matsu2254/c1f4121fa43c15f7ed132234e9c01b6a
 
 ---
 
 ### 応用（２）
 
-**TODO** gistの更新
-
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/matsu2254/study/blob/main/material/20240112_pandas_nyumon/notebook/zissen2.ipynb)
 
-https://gist.github.com/matsu2254/fb2ea5c70e3762599ace5b5945ecef87
-
-<!--
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb)
-
--->
+https://gist.github.com/matsu2254/4c559cb3992e9a5388eaaab00b701bec
